@@ -11,10 +11,37 @@ const MockedFollowersList = () => {
 };
 
 describe('FollowersList', () => {
+  beforeEach(() => {
+    console.log('Running before each test');
+  });
+
+  beforeAll(() => {
+    console.log('Running once before all tests');
+  });
+
+  afterEach(() => {
+    console.log('Running after each test');
+  });
+
+  afterAll(() => {
+    console.log('Running once after all tests');
+  });
+
   it('should render the first follower item', async () => {
     render(<MockedFollowersList />);
     const followerDivElement = await screen.findByTestId('follower-item-0');
-    screen.debug();
+    expect(followerDivElement).toBeInTheDocument();
+  });
+
+  it('should render the first follower item (2)', async () => {
+    render(<MockedFollowersList />);
+    const followerDivElement = await screen.findByTestId('follower-item-0');
+    expect(followerDivElement).toBeInTheDocument();
+  });
+
+  it('should render the first follower item (3)', async () => {
+    render(<MockedFollowersList />);
+    const followerDivElement = await screen.findByTestId('follower-item-0');
     expect(followerDivElement).toBeInTheDocument();
   });
 
