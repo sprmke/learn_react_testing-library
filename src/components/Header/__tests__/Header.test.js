@@ -46,5 +46,3 @@ it('should render same text passed into title prop (getByText)', () => {
 //   const headingElements = screen.getAllByRole('heading');
 //   expect(headingElements.length).toBe(2);
 // });
-
-// test
